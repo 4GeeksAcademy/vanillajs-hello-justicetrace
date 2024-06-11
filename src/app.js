@@ -1,20 +1,21 @@
 /* eslint-disable */
-import "bootstrap";
-import "./style.css";
-
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
+
+  function chooseRandomItem(array) {
+    const randomIndex = Math.floor(Math.random() * array.length);
+    return array[randomIndex];
+  }
+
   let who = ["The dog", "My grandma", "The mailman", "My bird"];
-  const chosenWho = chooseRandomItem(who);
+  const chosenWhoFromRandomItem = chooseRandomItem(who);
 
   let action = ["ate", "peed", "crushed", "broke"];
-  const chosenAction = chooseRandomItem(action);
+  const chosenActionFromRandomItem = chooseRandomItem(action); 
 
   let what = ["my homework", "my phone", "the car"];
-  const chosenWhat = chooseRandomItem(what);
+  const chosenWhatFromRandomItem = chooseRandomItem(what);
 
   let when = [
     "before the class",
@@ -23,14 +24,12 @@ window.onload = function() {
     "during my lunch",
     "while I was praying"
   ];
-  const chosenWhen = chooseRandomItem(when);
+  
+  const chosenWhenFromRandomItem = chooseRandomItem(when);
 
-  const newHeader = `${chosenWho} ${chosenAction} ${chosenWhat} ${chosenWhen}`;
+  const newHeader = `${chosenWhoFromRandomItem} ${chosenActionFromRandomItem} ${chosenWhatFromRandomItem} ${chosenWhenFromRandomItem}`;
   const h1 = document.querySelector("#excuse");
   h1.textContent = newHeader;
-
-  function chooseRandomItem(array) {
-    const randomIndex = Math.floor(Math.random() * array.length);
-    return array[randomIndex];
-  }
 };
+
+
